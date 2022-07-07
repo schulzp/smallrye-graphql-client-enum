@@ -1,0 +1,16 @@
+type DescribedValue_Option {
+    description: String
+    value: Option!
+}
+
+"Query root"
+type Query {
+    option: DescribedValue_Option!
+    options: [DescribedValue_Option]!
+    optionsNullSafe: [DescribedValue_Option!]!
+}
+
+enum Option {
+    OPTION_A
+    OPTION_B
+}
